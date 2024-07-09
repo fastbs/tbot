@@ -1,0 +1,2710 @@
+[
+    {
+        "entity_id": "person.admin",
+        "state": "unknown",
+        "attributes": {
+            "editable": true,
+            "id": "admin",
+            "user_id": "fcae687c9d4641bea1219ed389297c5d",
+            "device_trackers": [
+                "device_tracker.22071219cg"
+            ],
+            "friendly_name": "admin"
+        },
+        "last_changed": "2024-06-20T09:59:08.596286+00:00",
+        "last_updated": "2024-06-20T10:02:10.128813+00:00",
+        "context": {
+            "id": "01J0THHDAGBSARFSXJH8F9ZT24",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "person.user",
+        "state": "unknown",
+        "attributes": {
+            "editable": true,
+            "id": "user",
+            "user_id": "12880e044aa4447599e3a271efbebbfe",
+            "device_trackers": [],
+            "entity_picture": "/api/image/serve/bef0bc31905d10609370f6c8a542f7a6/512x512",
+            "friendly_name": "user"
+        },
+        "last_changed": "2024-06-20T09:59:08.596972+00:00",
+        "last_updated": "2024-06-20T10:02:10.129428+00:00",
+        "context": {
+            "id": "01J0THHDAHWQQGM5VK9F5AS6EQ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "zone.home",
+        "state": "0",
+        "attributes": {
+            "latitude": 53.53261761430589,
+            "longitude": 142.9879188537598,
+            "radius": 100,
+            "passive": false,
+            "persons": [],
+            "editable": true,
+            "icon": "mdi:home",
+            "friendly_name": "Финальная дача"
+        },
+        "last_changed": "2024-06-20T09:59:28.929886+00:00",
+        "last_updated": "2024-06-20T09:59:28.929886+00:00",
+        "context": {
+            "id": "01J0THCFX14QNTSQA6HCKX6E0W",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sun.sun",
+        "state": "below_horizon",
+        "attributes": {
+            "next_dawn": "2024-07-09T17:20:52.511013+00:00",
+            "next_dusk": "2024-07-09T11:46:13.243316+00:00",
+            "next_midnight": "2024-07-09T14:33:29+00:00",
+            "next_noon": "2024-07-10T02:33:27+00:00",
+            "next_rising": "2024-07-09T18:12:12.803800+00:00",
+            "next_setting": "2024-07-10T10:54:02.687494+00:00",
+            "elevation": -1.48,
+            "azimuth": 312.63,
+            "rising": false,
+            "friendly_name": "Sun"
+        },
+        "last_changed": "2024-07-09T10:58:54.015567+00:00",
+        "last_updated": "2024-07-09T11:02:54.016519+00:00",
+        "context": {
+            "id": "01J2BJJ8T0H0TV7HYQWNRABWF9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "automation.vtoroi_obogrevatel_v_teplitse",
+        "state": "off",
+        "attributes": {
+            "id": "1717637336093",
+            "last_triggered": "2024-06-22T11:48:10.945007+00:00",
+            "mode": "single",
+            "current": 0,
+            "friendly_name": "Обогреватель включить"
+        },
+        "last_changed": "2024-06-23T09:23:33.732531+00:00",
+        "last_updated": "2024-06-23T09:23:33.732531+00:00",
+        "context": {
+            "id": "01J126GW73H54NFX4ZZK19E35F",
+            "parent_id": null,
+            "user_id": "fcae687c9d4641bea1219ed389297c5d"
+        }
+    },
+    {
+        "entity_id": "automation.obogrevatel_vykliuchit",
+        "state": "off",
+        "attributes": {
+            "id": "1717638917834",
+            "last_triggered": "2024-06-22T20:03:11.016326+00:00",
+            "mode": "single",
+            "current": 0,
+            "friendly_name": "Обогреватель выключить"
+        },
+        "last_changed": "2024-06-23T09:23:36.903405+00:00",
+        "last_updated": "2024-06-23T09:23:36.903405+00:00",
+        "context": {
+            "id": "01J126GZA61E7PA7Q9KEF5Z5YP",
+            "parent_id": null,
+            "user_id": "fcae687c9d4641bea1219ed389297c5d"
+        }
+    },
+    {
+        "entity_id": "sensor.moon_phase",
+        "state": "waxing_crescent",
+        "attributes": {
+            "options": [
+                "new_moon",
+                "waxing_crescent",
+                "first_quarter",
+                "waxing_gibbous",
+                "full_moon",
+                "waning_gibbous",
+                "last_quarter",
+                "waning_crescent"
+            ],
+            "device_class": "enum",
+            "icon": "mdi:moon-waxing-crescent",
+            "friendly_name": "Moon Фаза"
+        },
+        "last_changed": "2024-07-05T14:00:09.412118+00:00",
+        "last_updated": "2024-07-05T14:00:09.412118+00:00",
+        "context": {
+            "id": "01J21K3YY4XN779N5WD3T1W3Y2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_dawn",
+        "state": "2024-07-09T17:20:52+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "icon": "mdi:sun-clock",
+            "friendly_name": "Sun Следующий рассвет"
+        },
+        "last_changed": "2024-07-08T17:19:57.055122+00:00",
+        "last_updated": "2024-07-08T17:19:57.055122+00:00",
+        "context": {
+            "id": "01J29NQYKZC9MBYQ3XXHT5GK1V",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_dusk",
+        "state": "2024-07-09T11:46:13+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "icon": "mdi:sun-clock",
+            "friendly_name": "Sun Следующие сумерки"
+        },
+        "last_changed": "2024-07-08T11:47:23.585648+00:00",
+        "last_updated": "2024-07-08T11:47:23.585648+00:00",
+        "context": {
+            "id": "01J292Q0T1T11VQY67JKC47DVM",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_midnight",
+        "state": "2024-07-09T14:33:29+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "icon": "mdi:sun-clock",
+            "friendly_name": "Sun Следующая полночь"
+        },
+        "last_changed": "2024-07-08T14:33:24.175408+00:00",
+        "last_updated": "2024-07-08T14:33:24.175408+00:00",
+        "context": {
+            "id": "01J29C6ZYFJ386S1T760ZNZAWJ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_noon",
+        "state": "2024-07-10T02:33:27+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "icon": "mdi:sun-clock",
+            "friendly_name": "Sun Следующий полдень"
+        },
+        "last_changed": "2024-07-09T02:33:28.938457+00:00",
+        "last_updated": "2024-07-09T02:33:28.938457+00:00",
+        "context": {
+            "id": "01J2ANDG3AJRG3BV4910GBXDY4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_rising",
+        "state": "2024-07-09T18:12:12+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "icon": "mdi:sun-clock",
+            "friendly_name": "Sun Следующий восход"
+        },
+        "last_changed": "2024-07-08T18:11:27.219998+00:00",
+        "last_updated": "2024-07-08T18:11:27.219998+00:00",
+        "context": {
+            "id": "01J29RP8BK6ZZ2T2QP3MQV0K0P",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_setting",
+        "state": "2024-07-10T10:54:02+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "icon": "mdi:sun-clock",
+            "friendly_name": "Sun Следующий заход"
+        },
+        "last_changed": "2024-07-09T10:55:00.622369+00:00",
+        "last_updated": "2024-07-09T10:55:00.622369+00:00",
+        "context": {
+            "id": "01J2BJ3TGE0PRQ4RZ7GR67T7A6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.lts",
+        "state": "off",
+        "attributes": {
+            "raw_state": false,
+            "friendly_name": "LTS"
+        },
+        "last_changed": "2024-07-09T10:45:06.146760+00:00",
+        "last_updated": "2024-07-09T10:45:06.146760+00:00",
+        "context": {
+            "id": "01J2BHHNZ2M4KTBY00ZMECTYCB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.keenetic_giga_kn_1011_connectivity",
+        "state": "on",
+        "attributes": {
+            "device_class": "connectivity",
+            "friendly_name": "Keenetic Giga (KN-1011) Связь"
+        },
+        "last_changed": "2024-07-07T08:44:21.102042+00:00",
+        "last_updated": "2024-07-07T08:44:21.102042+00:00",
+        "context": {
+            "id": "01J265V4QE3521Z49V0YZ9AP3C",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.epever",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.109",
+            "mac": "A0:A3:B3:28:82:CC",
+            "interface": "Home",
+            "friendly_name": "epever"
+        },
+        "last_changed": "2024-07-07T08:44:21.114053+00:00",
+        "last_updated": "2024-07-07T08:44:21.114053+00:00",
+        "context": {
+            "id": "01J265V4QTBV9798GNCR44KWTE",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.60_01_94_3f_b3_a0",
+        "state": "not_home",
+        "attributes": {
+            "source_type": "router",
+            "mac": "60:01:94:3F:B3:A0",
+            "friendly_name": "fbs-switch-2"
+        },
+        "last_changed": "2024-07-07T08:44:21.171772+00:00",
+        "last_updated": "2024-07-07T08:44:21.171772+00:00",
+        "context": {
+            "id": "01J265V4SKE0YX3RT1MNEGBA6Y",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.80_7d_3a_1a_a2_10",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.113",
+            "mac": "80:7D:3A:1A:A2:10",
+            "interface": "Home",
+            "friendly_name": "fbs-switch-1"
+        },
+        "last_changed": "2024-07-07T08:44:21.105764+00:00",
+        "last_updated": "2024-07-07T08:44:21.105764+00:00",
+        "context": {
+            "id": "01J265V4QHEJ7BD4S1YADDZ27K",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.rozetka_1",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.107",
+            "mac": "10:D5:61:43:A6:8A",
+            "interface": "Home",
+            "friendly_name": "Розетка 1"
+        },
+        "last_changed": "2024-07-07T08:44:21.115393+00:00",
+        "last_updated": "2024-07-07T08:44:21.115393+00:00",
+        "context": {
+            "id": "01J265V4QV11TY23NBA94X5RFE",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.kamera_04_vorota_wifi",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.194",
+            "mac": "B4:FB:E3:36:8D:BE",
+            "interface": "Home",
+            "friendly_name": "Камера 04 - Ворота (WiFi)"
+        },
+        "last_changed": "2024-07-07T08:44:21.111135+00:00",
+        "last_updated": "2024-07-07T08:44:21.111135+00:00",
+        "context": {
+            "id": "01J265V4QQH5EM6GFGCGT8RHDX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.00_12_42_15_c0_6f",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.9",
+            "mac": "00:12:42:15:C0:6F",
+            "interface": "Home",
+            "friendly_name": "Регистратор-9"
+        },
+        "last_changed": "2024-07-07T08:44:21.121401+00:00",
+        "last_updated": "2024-07-07T08:44:21.121401+00:00",
+        "context": {
+            "id": "01J265V4R1FYKTG2970KZDN34Z",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.kamera_01_dvor",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.191",
+            "mac": "00:12:42:0A:BD:CF",
+            "interface": "Home",
+            "friendly_name": "Камера 01 - Двор"
+        },
+        "last_changed": "2024-07-07T08:44:21.124612+00:00",
+        "last_updated": "2024-07-07T08:44:21.124612+00:00",
+        "context": {
+            "id": "01J265V4R4056BBAJPVJQ5DDSW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.kamera_03_reka",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.138",
+            "mac": "00:94:A8:62:BE:D1",
+            "interface": "Home",
+            "friendly_name": "Камера 03 - Река"
+        },
+        "last_changed": "2024-07-07T08:44:21.131012+00:00",
+        "last_updated": "2024-07-07T08:44:21.131012+00:00",
+        "context": {
+            "id": "01J265V4RBD5GDA7RC5QXVN15M",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.kamera_02_dom",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.54",
+            "mac": "00:61:BA:AC:42:6D",
+            "interface": "Home",
+            "friendly_name": "Камера 02 - Дом"
+        },
+        "last_changed": "2024-07-07T08:44:21.137028+00:00",
+        "last_updated": "2024-07-07T08:44:21.137028+00:00",
+        "context": {
+            "id": "01J265V4RHJ68RTT5GK6BATN0V",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.kamera_05_axis",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.105",
+            "mac": "00:40:8C:EC:CB:FC",
+            "interface": "Home",
+            "friendly_name": "Камера 05 - Axis"
+        },
+        "last_changed": "2024-07-07T08:44:21.140230+00:00",
+        "last_updated": "2024-07-07T08:44:21.140230+00:00",
+        "context": {
+            "id": "01J265V4RMKMMDJAWHHF22GEGT",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.kamera_06_teplitsa",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.106",
+            "mac": "74:EE:2A:EE:27:BA",
+            "interface": "Home",
+            "friendly_name": "Камера 06 - Теплица"
+        },
+        "last_changed": "2024-07-07T08:44:21.144959+00:00",
+        "last_updated": "2024-07-07T08:44:21.144959+00:00",
+        "context": {
+            "id": "01J265V4RRRMBPN822ZCPGG9B7",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.teplica",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.95",
+            "mac": "48:3F:DA:A9:E3:EE",
+            "interface": "Home",
+            "friendly_name": "teplica"
+        },
+        "last_changed": "2024-07-07T09:36:29.725023+00:00",
+        "last_updated": "2024-07-07T09:36:29.725023+00:00",
+        "context": {
+            "id": "01J268TM0XSYVDJXYH7DPMZFFB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.00_00_1b_0a_72_f6",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.170",
+            "mac": "00:00:1B:0A:72:F6",
+            "interface": "Home",
+            "friendly_name": "Камера 08 - Беседка"
+        },
+        "last_changed": "2024-07-07T08:44:21.152113+00:00",
+        "last_updated": "2024-07-07T08:44:21.152113+00:00",
+        "context": {
+            "id": "01J265V4S0NCFDY5XY4CAEPB1S",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.00_c0_27_ec_41_22",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.83",
+            "mac": "00:C0:27:EC:41:22",
+            "interface": "Home",
+            "friendly_name": "Камера 07 - Двор 2"
+        },
+        "last_changed": "2024-07-08T20:02:19.744801+00:00",
+        "last_updated": "2024-07-08T20:02:19.744801+00:00",
+        "context": {
+            "id": "01J29Z18Z0QWK1MZ237W2B2PZ0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.keenetic_gateway_wan_status",
+        "state": "on",
+        "attributes": {
+            "device_class": "connectivity",
+            "friendly_name": "Keenetic Gateway Состояние WAN"
+        },
+        "last_changed": "2024-07-09T02:09:01.276329+00:00",
+        "last_updated": "2024-07-09T02:09:01.276329+00:00",
+        "context": {
+            "id": "01J2AM0PTWXZH67KM4C11Q9S9A",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.keenetic_gateway_external_ip",
+        "state": "192.168.8.118",
+        "attributes": {
+            "icon": "mdi:server-network",
+            "friendly_name": "Keenetic Gateway Внешний IP"
+        },
+        "last_changed": "2024-07-09T02:09:01.276841+00:00",
+        "last_updated": "2024-07-09T02:09:01.276841+00:00",
+        "context": {
+            "id": "01J2AM0PTWCPEPX670G6YQMNGM",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.keenetic_gateway_download_speed",
+        "state": "1.66307988382282",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "KiB/s",
+            "device_class": "data_rate",
+            "icon": "mdi:server-network",
+            "friendly_name": "Keenetic Gateway Скорость загрузки"
+        },
+        "last_changed": "2024-07-09T11:03:23.291604+00:00",
+        "last_updated": "2024-07-09T11:03:23.291604+00:00",
+        "context": {
+            "id": "01J2BJK5CV48VY5NQYQAYPYRDG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.keenetic_gateway_upload_speed",
+        "state": "0.702680466875439",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "KiB/s",
+            "device_class": "data_rate",
+            "icon": "mdi:server-network",
+            "friendly_name": "Keenetic Gateway Скорость передачи"
+        },
+        "last_changed": "2024-07-09T11:03:23.292021+00:00",
+        "last_updated": "2024-07-09T11:03:23.292021+00:00",
+        "context": {
+            "id": "01J2BJK5CWBB8CTGM5TXYC53S5",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "weather.forecast_dacha",
+        "state": "rainy",
+        "attributes": {
+            "temperature": 11.2,
+            "dew_point": 10.7,
+            "temperature_unit": "°C",
+            "humidity": 97,
+            "cloud_coverage": 100.0,
+            "pressure": 1003.7,
+            "pressure_unit": "hPa",
+            "wind_bearing": 53.1,
+            "wind_speed": 26.3,
+            "wind_speed_unit": "km/h",
+            "visibility_unit": "km",
+            "precipitation_unit": "mm",
+            "forecast": [
+                {
+                    "condition": "rainy",
+                    "datetime": "2024-07-09T02:00:00+00:00",
+                    "wind_bearing": 53.1,
+                    "temperature": 11.2,
+                    "templow": 10.2,
+                    "wind_speed": 28.8,
+                    "precipitation": 18.1,
+                    "humidity": 97
+                },
+                {
+                    "condition": "cloudy",
+                    "datetime": "2024-07-10T02:00:00+00:00",
+                    "wind_bearing": 91.4,
+                    "temperature": 12.5,
+                    "templow": 10.5,
+                    "wind_speed": 22.7,
+                    "precipitation": 0.3,
+                    "humidity": 93
+                },
+                {
+                    "condition": "cloudy",
+                    "datetime": "2024-07-11T02:00:00+00:00",
+                    "wind_bearing": 38.9,
+                    "temperature": 14.2,
+                    "templow": 10.0,
+                    "wind_speed": 16.2,
+                    "precipitation": 4.3,
+                    "humidity": 87
+                },
+                {
+                    "condition": "cloudy",
+                    "datetime": "2024-07-12T02:00:00+00:00",
+                    "wind_bearing": 44.6,
+                    "temperature": 15.1,
+                    "templow": 11.6,
+                    "wind_speed": 9.7,
+                    "precipitation": 0.3,
+                    "humidity": 86
+                },
+                {
+                    "condition": "cloudy",
+                    "datetime": "2024-07-13T02:00:00+00:00",
+                    "wind_bearing": 307.2,
+                    "temperature": 17.3,
+                    "templow": 11.9,
+                    "wind_speed": 5.8,
+                    "precipitation": 0.8,
+                    "humidity": 78
+                },
+                {
+                    "condition": "cloudy",
+                    "datetime": "2024-07-14T02:00:00+00:00",
+                    "wind_bearing": 124.4,
+                    "temperature": 16.4,
+                    "templow": 11.5,
+                    "wind_speed": 10.1,
+                    "precipitation": 0.4,
+                    "humidity": 86
+                }
+            ],
+            "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+            "friendly_name": "Forecast Дача",
+            "supported_features": 3
+        },
+        "last_changed": "2024-07-09T10:55:02.968658+00:00",
+        "last_updated": "2024-07-09T10:55:02.968658+00:00",
+        "context": {
+            "id": "01J2BJ3WSRP95DN7H9RXHYVQZT",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.hacs",
+        "state": "1",
+        "attributes": {
+            "repositories": [
+                {
+                    "name": "hacs/integration",
+                    "display_name": "HACS",
+                    "installed_version": "1.33.0",
+                    "available_version": "1.34.0"
+                }
+            ],
+            "unit_of_measurement": "pending update(s)",
+            "icon": "hacs:hacs",
+            "friendly_name": "hacs"
+        },
+        "last_changed": "2024-06-20T10:02:17.006801+00:00",
+        "last_updated": "2024-06-20T10:02:17.006801+00:00",
+        "context": {
+            "id": "01J0THHM1EX0D84VQK0TT5SQ34",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.22071219cg_battery_level",
+        "state": "52",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "icon": "mdi:battery-50",
+            "friendly_name": "22071219CG Battery level"
+        },
+        "last_changed": "2024-06-20T10:01:32.843211+00:00",
+        "last_updated": "2024-06-20T10:01:32.843211+00:00",
+        "context": {
+            "id": "01J0THG8XBYS4RDMD41TB1VNM4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.22071219cg_battery_state",
+        "state": "discharging",
+        "attributes": {
+            "icon": "mdi:battery-minus",
+            "friendly_name": "22071219CG Battery state"
+        },
+        "last_changed": "2024-06-20T10:01:32.844336+00:00",
+        "last_updated": "2024-06-20T10:01:32.844336+00:00",
+        "context": {
+            "id": "01J0THG8XCAYPRWPW7RSTA77VJ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.22071219cg_charger_type",
+        "state": "none",
+        "attributes": {
+            "icon": "mdi:battery",
+            "friendly_name": "22071219CG Charger type"
+        },
+        "last_changed": "2024-06-20T10:01:32.845175+00:00",
+        "last_updated": "2024-06-20T10:01:32.845175+00:00",
+        "context": {
+            "id": "01J0THG8XDXDZ38MD6CV62NYW3",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.22071219cg",
+        "state": "unknown",
+        "attributes": {
+            "source_type": "gps",
+            "friendly_name": "22071219CG"
+        },
+        "last_changed": "2024-06-20T10:01:42.839257+00:00",
+        "last_updated": "2024-06-20T10:01:42.839257+00:00",
+        "context": {
+            "id": "01J0THGJNQ7QJ829YEH2SGF1JZ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.fbs_switch_2_fbs_switch_2",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "FBS_Switch_2 FBS Switch 2"
+        },
+        "last_changed": "2024-07-07T03:46:26.279089+00:00",
+        "last_updated": "2024-07-07T03:46:26.279089+00:00",
+        "context": {
+            "id": "01J25MSMV70AMMKZNR01YRTAAC",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.teplica_barrel_temperature",
+        "state": "14.6",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "°C",
+            "device_class": "temperature",
+            "friendly_name": "Teplica Barrel temperature"
+        },
+        "last_changed": "2024-07-09T10:09:35.468472+00:00",
+        "last_updated": "2024-07-09T10:09:35.468472+00:00",
+        "context": {
+            "id": "01J2BFGN7CCHT3RZDJJQNBBYG0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.teplica_greenhouse_temperature",
+        "state": "17.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "°C",
+            "device_class": "temperature",
+            "friendly_name": "Teplica Greenhouse temperature"
+        },
+        "last_changed": "2024-07-09T10:40:36.689365+00:00",
+        "last_updated": "2024-07-09T10:40:36.689365+00:00",
+        "context": {
+            "id": "01J2BH9ETHADCWDHH445NC6119",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.teplica_greenhouse_humidity",
+        "state": "73",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "humidity",
+            "friendly_name": "Teplica Greenhouse humidity"
+        },
+        "last_changed": "2024-07-09T10:15:36.694684+00:00",
+        "last_updated": "2024-07-09T10:15:36.694684+00:00",
+        "context": {
+            "id": "01J2BFVNZPN3ZC4WE7ZPFP0B93",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.teplica_outdoor_temperature",
+        "state": "unknown",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "°C",
+            "device_class": "temperature",
+            "friendly_name": "Teplica Outdoor temperature"
+        },
+        "last_changed": "2024-07-07T09:34:51.990199+00:00",
+        "last_updated": "2024-07-07T09:34:51.990199+00:00",
+        "context": {
+            "id": "01J268QMJP280F1ME8YD608XHZ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.teplica_outdoor_humidity",
+        "state": "unknown",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "humidity",
+            "friendly_name": "Teplica Outdoor humidity"
+        },
+        "last_changed": "2024-07-07T09:34:52.008371+00:00",
+        "last_updated": "2024-07-07T09:34:52.008371+00:00",
+        "context": {
+            "id": "01J268QMK80FGM0GDSGB6F7R96",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.teplica_soil_sensor",
+        "state": "0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "voltage",
+            "icon": "mdi:water-percent",
+            "friendly_name": "Teplica Soil Sensor"
+        },
+        "last_changed": "2024-07-07T09:34:52.026599+00:00",
+        "last_updated": "2024-07-07T09:34:52.026599+00:00",
+        "context": {
+            "id": "01J268QMKT980TQNETERDGDP1B",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.teplica_greenhouse_door",
+        "state": "on",
+        "attributes": {
+            "device_class": "door",
+            "friendly_name": "Teplica Greenhouse door"
+        },
+        "last_changed": "2024-07-07T09:34:51.900809+00:00",
+        "last_updated": "2024-07-07T09:34:51.900809+00:00",
+        "context": {
+            "id": "01J268QMFW5CTBPHDSA2BCK0XF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.fbs_switch_1_fbs_switch_1",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "FBS_Switch_1 FBS Switch 1"
+        },
+        "last_changed": "2024-07-09T10:31:12.109677+00:00",
+        "last_updated": "2024-07-09T10:31:12.109677+00:00",
+        "context": {
+            "id": "01J2BGR7EHYTFKFX7MN0GNRG16",
+            "parent_id": null,
+            "user_id": "fcae687c9d4641bea1219ed389297c5d"
+        }
+    },
+    {
+        "entity_id": "sensor.epever_maximum_battery_voltage_today",
+        "state": "14.9",
+        "attributes": {
+            "unit_of_measurement": "V",
+            "friendly_name": "Epever Maximum battery voltage today"
+        },
+        "last_changed": "2024-07-09T00:14:33.614660+00:00",
+        "last_updated": "2024-07-09T00:14:33.614660+00:00",
+        "context": {
+            "id": "01J2ADF44EXP3Q35NMA2G32NXS",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_minimum_battery_voltage_today",
+        "state": "12.6",
+        "attributes": {
+            "unit_of_measurement": "V",
+            "friendly_name": "Epever Minimum battery voltage today"
+        },
+        "last_changed": "2024-07-08T20:17:03.962486+00:00",
+        "last_updated": "2024-07-08T20:17:03.962486+00:00",
+        "context": {
+            "id": "01J29ZW8ET9MJ56AXSYZ8GNK69",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_consumed_energy_today",
+        "state": "20",
+        "attributes": {
+            "unit_of_measurement": "Wh",
+            "friendly_name": "Epever Consumed energy today"
+        },
+        "last_changed": "2024-07-09T07:07:33.103379+00:00",
+        "last_updated": "2024-07-09T07:07:33.103379+00:00",
+        "context": {
+            "id": "01J2B53AVFFWV741PXQHK3T9DD",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_generated_energy_today",
+        "state": "40",
+        "attributes": {
+            "unit_of_measurement": "Wh",
+            "friendly_name": "Epever Generated energy today"
+        },
+        "last_changed": "2024-07-09T06:33:33.299654+00:00",
+        "last_updated": "2024-07-09T06:33:33.299654+00:00",
+        "context": {
+            "id": "01J2B352VK6PTY742D5SEPPZGN",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_battery_voltage",
+        "state": "12.7",
+        "attributes": {
+            "unit_of_measurement": "V",
+            "friendly_name": "Epever Battery voltage"
+        },
+        "last_changed": "2024-07-09T11:00:33.615038+00:00",
+        "last_updated": "2024-07-09T11:00:33.615038+00:00",
+        "context": {
+            "id": "01J2BJDZPFJY63B2XMMZX5YZ1G",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_battery_current",
+        "state": "0.00",
+        "attributes": {
+            "unit_of_measurement": "A",
+            "friendly_name": "Epever Battery current"
+        },
+        "last_changed": "2024-07-09T11:00:33.634473+00:00",
+        "last_updated": "2024-07-09T11:00:33.634473+00:00",
+        "context": {
+            "id": "01J2BJDZQ2KFGZDRDPV8842R7W",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_pv_array_input_voltage",
+        "state": "2.5",
+        "attributes": {
+            "unit_of_measurement": "V",
+            "friendly_name": "Epever PV array input voltage"
+        },
+        "last_changed": "2024-07-09T11:03:01.694574+00:00",
+        "last_updated": "2024-07-09T11:03:01.694574+00:00",
+        "context": {
+            "id": "01J2BJJG9Y5WZ0GHV0EH3CVBDD",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_pv_array_input_current",
+        "state": "0.00",
+        "attributes": {
+            "unit_of_measurement": "A",
+            "friendly_name": "Epever PV array input current"
+        },
+        "last_changed": "2024-07-09T08:52:31.854490+00:00",
+        "last_updated": "2024-07-09T08:52:31.854490+00:00",
+        "context": {
+            "id": "01J2BB3HZER895GQ00RB42705A",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_pv_array_input_power",
+        "state": "0.0",
+        "attributes": {
+            "unit_of_measurement": "W",
+            "friendly_name": "Epever PV array input power"
+        },
+        "last_changed": "2024-07-09T09:29:01.862919+00:00",
+        "last_updated": "2024-07-09T09:29:01.862919+00:00",
+        "context": {
+            "id": "01J2BD6CN6ZBVNDVV7TD99WSC6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_charging_voltage",
+        "state": "12.7",
+        "attributes": {
+            "unit_of_measurement": "V",
+            "friendly_name": "Epever Charging voltage"
+        },
+        "last_changed": "2024-07-09T11:00:31.992183+00:00",
+        "last_updated": "2024-07-09T11:00:31.992183+00:00",
+        "context": {
+            "id": "01J2BJDY3RSTJGQFT91HA5ZEMS",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_charging_current",
+        "state": "0.0",
+        "attributes": {
+            "unit_of_measurement": "A",
+            "friendly_name": "Epever Charging current"
+        },
+        "last_changed": "2024-07-09T08:39:31.951545+00:00",
+        "last_updated": "2024-07-09T08:39:31.951545+00:00",
+        "context": {
+            "id": "01J2BABRBFPCJDVEDFZJP16T4E",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_charging_power",
+        "state": "0.0",
+        "attributes": {
+            "unit_of_measurement": "W",
+            "friendly_name": "Epever Charging power"
+        },
+        "last_changed": "2024-07-09T09:29:01.898164+00:00",
+        "last_updated": "2024-07-09T09:29:01.898164+00:00",
+        "context": {
+            "id": "01J2BD6CPAQHJ0SPD4G6J4QTTG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_load_voltage",
+        "state": "0.0",
+        "attributes": {
+            "unit_of_measurement": "V",
+            "friendly_name": "Epever Load voltage"
+        },
+        "last_changed": "2024-07-09T11:00:32.113315+00:00",
+        "last_updated": "2024-07-09T11:00:32.113315+00:00",
+        "context": {
+            "id": "01J2BJDY7HAJSG4B3TG9HCB4CG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_load_current",
+        "state": "0.00",
+        "attributes": {
+            "unit_of_measurement": "A",
+            "friendly_name": "Epever Load Current"
+        },
+        "last_changed": "2024-07-09T11:00:32.129384+00:00",
+        "last_updated": "2024-07-09T11:00:32.129384+00:00",
+        "context": {
+            "id": "01J2BJDY81J056Y7F5PEGVZ9D0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_load_power",
+        "state": "0.0",
+        "attributes": {
+            "unit_of_measurement": "W",
+            "friendly_name": "Epever Load power"
+        },
+        "last_changed": "2024-07-09T11:00:32.146512+00:00",
+        "last_updated": "2024-07-09T11:00:32.146512+00:00",
+        "context": {
+            "id": "01J2BJDY8JDHT4EXSNJ228NVSZ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_battery_temperature",
+        "state": "14.0",
+        "attributes": {
+            "unit_of_measurement": "°C",
+            "friendly_name": "Epever Battery temperature"
+        },
+        "last_changed": "2024-07-09T10:48:31.997660+00:00",
+        "last_updated": "2024-07-09T10:48:31.997660+00:00",
+        "context": {
+            "id": "01J2BHQYZXVETECY8Z28BDWXY3",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_device_temperature",
+        "state": "16.0",
+        "attributes": {
+            "unit_of_measurement": "°C",
+            "friendly_name": "Epever Device temperature"
+        },
+        "last_changed": "2024-07-09T11:03:32.389812+00:00",
+        "last_updated": "2024-07-09T11:03:32.389812+00:00",
+        "context": {
+            "id": "01J2BJKE95ZEV41QWE82DMSC7X",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_power_components_temperature",
+        "state": "16.0",
+        "attributes": {
+            "unit_of_measurement": "°C",
+            "friendly_name": "Epever Power components temperature"
+        },
+        "last_changed": "2024-07-09T11:03:32.407159+00:00",
+        "last_updated": "2024-07-09T11:03:32.407159+00:00",
+        "context": {
+            "id": "01J2BJKE9QZG5WXJTEAJJCM5SM",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_battery_soc",
+        "state": "58",
+        "attributes": {
+            "unit_of_measurement": "%",
+            "friendly_name": "Epever Battery SOC"
+        },
+        "last_changed": "2024-07-09T11:02:02.341197+00:00",
+        "last_updated": "2024-07-09T11:02:02.341197+00:00",
+        "context": {
+            "id": "01J2BJGPB5D9PNGYAP11MCTH5G",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_remote_battery_temperature",
+        "state": "0.0",
+        "attributes": {
+            "unit_of_measurement": "°C",
+            "friendly_name": "Epever Remote battery temperature"
+        },
+        "last_changed": "2024-06-20T10:01:54.069917+00:00",
+        "last_updated": "2024-06-20T10:01:54.069917+00:00",
+        "context": {
+            "id": "01J0THGXMNJ065AAX4PZ9MF2A4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_remote_real_voltage",
+        "state": "12.0",
+        "attributes": {
+            "unit_of_measurement": "°C",
+            "friendly_name": "Epever Remote real voltage"
+        },
+        "last_changed": "2024-06-20T10:01:54.076183+00:00",
+        "last_updated": "2024-06-20T10:01:54.076183+00:00",
+        "context": {
+            "id": "01J0THGXMW9W9NV9TRJB7B9GAW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_battery_status_voltage",
+        "state": "0",
+        "attributes": {
+            "friendly_name": "Epever Battery status voltage"
+        },
+        "last_changed": "2024-06-20T10:01:54.092737+00:00",
+        "last_updated": "2024-06-20T10:01:54.092737+00:00",
+        "context": {
+            "id": "01J0THGXNC1PQ02W0F2QSGX1YY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_battery_status_temeratur",
+        "state": "0",
+        "attributes": {
+            "friendly_name": "Epever Battery status temeratur"
+        },
+        "last_changed": "2024-06-20T10:01:54.104199+00:00",
+        "last_updated": "2024-06-20T10:01:54.104199+00:00",
+        "context": {
+            "id": "01J0THGXNR1RCEPRT4J0DHHP55",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_charger_status",
+        "state": "1",
+        "attributes": {
+            "friendly_name": "Epever Charger status"
+        },
+        "last_changed": "2024-07-09T09:33:32.712536+00:00",
+        "last_updated": "2024-07-09T09:33:32.712536+00:00",
+        "context": {
+            "id": "01J2BDEN58JMNA6TSTMTYWNPAT",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_charging_status",
+        "state": "Off",
+        "attributes": {
+            "friendly_name": "Epever Charging Status"
+        },
+        "last_changed": "2024-07-09T09:33:32.718879+00:00",
+        "last_updated": "2024-07-09T09:33:32.718879+00:00",
+        "context": {
+            "id": "01J2BDEN5E0QPRPYD1B589A5HX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_solar_status",
+        "state": "Cut out",
+        "attributes": {
+            "friendly_name": "Epever Solar Status"
+        },
+        "last_changed": "2024-07-09T09:33:32.724754+00:00",
+        "last_updated": "2024-07-09T09:33:32.724754+00:00",
+        "context": {
+            "id": "01J2BDEN5MCGB2E9NCXG5QGSBF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_device_status",
+        "state": "Normal",
+        "attributes": {
+            "friendly_name": "Epever Device Status"
+        },
+        "last_changed": "2024-06-20T10:01:54.167659+00:00",
+        "last_updated": "2024-06-20T10:01:54.167659+00:00",
+        "context": {
+            "id": "01J0THGXQQP86XTSGJ5HFTH5KH",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_battery_voltage_status",
+        "state": "Normal",
+        "attributes": {
+            "friendly_name": "Epever Battery Voltage Status"
+        },
+        "last_changed": "2024-06-20T10:01:54.179546+00:00",
+        "last_updated": "2024-06-20T10:01:54.179546+00:00",
+        "context": {
+            "id": "01J0THGXR332KE1C3F1GD4N114",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_battery_temperature_status",
+        "state": "Normal",
+        "attributes": {
+            "friendly_name": "Epever Battery Temperature Status"
+        },
+        "last_changed": "2024-06-20T10:01:54.191086+00:00",
+        "last_updated": "2024-06-20T10:01:54.191086+00:00",
+        "context": {
+            "id": "01J0THGXRFXC6JMRAN5RE6RH8G",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.epever_rtc_time_sensor",
+        "state": "2024-07-09 22:03:28",
+        "attributes": {
+            "friendly_name": "Epever RTC Time Sensor"
+        },
+        "last_changed": "2024-07-09T11:03:31.910798+00:00",
+        "last_updated": "2024-07-09T11:03:31.910798+00:00",
+        "context": {
+            "id": "01J2BJKDT6VTZ69SG7RNDMX4R9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.epever_charging_input_volt_failure",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Epever Charging Input Volt Failure"
+        },
+        "last_changed": "2024-06-20T10:01:53.468667+00:00",
+        "last_updated": "2024-06-20T10:01:53.468667+00:00",
+        "context": {
+            "id": "01J0THGX1W5ZSNBQA1VYXY49ZA",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.epever_force_load_onoff",
+        "state": "on",
+        "attributes": {
+            "friendly_name": "Epever Force Load on/off"
+        },
+        "last_changed": "2024-06-20T10:01:54.127104+00:00",
+        "last_updated": "2024-06-20T10:01:54.127104+00:00",
+        "context": {
+            "id": "01J0THGXPFZF9VXZ24SM9KKPWT",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.epever_clear_generating_electricity_statistic",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Epever Clear generating  electricity statistic"
+        },
+        "last_changed": "2024-06-20T10:01:54.148942+00:00",
+        "last_updated": "2024-06-20T10:01:54.148942+00:00",
+        "context": {
+            "id": "01J0THGXQ437MV61AEZ2APJ4BF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.q6034_e_0",
+        "state": "idle",
+        "attributes": {
+            "access_token": "fde00639ddc142198694d19501769d2b064691cfde6630bd36a2c34f76e1e6d0",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.q6034_e_0?token=fde00639ddc142198694d19501769d2b064691cfde6630bd36a2c34f76e1e6d0",
+            "friendly_name": "Q6034-E 0",
+            "supported_features": 2
+        },
+        "last_changed": "2024-07-05T01:28:41.995463+00:00",
+        "last_updated": "2024-07-09T10:59:44.439853+00:00",
+        "context": {
+            "id": "01J2BJCFNQ46SJTQ3H7FNV5S03",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "select.kompiuter_power_on_behavior",
+        "state": "unavailable",
+        "attributes": {
+            "options": [
+                "power_off",
+                "power_on",
+                "last"
+            ],
+            "friendly_name": "Компьютер Power on behavior"
+        },
+        "last_changed": "2024-06-20T10:01:58.816688+00:00",
+        "last_updated": "2024-06-27T20:00:39.138927+00:00",
+        "context": {
+            "id": "01J1DMJ9Q2TJW5VRWEDE4169A2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.obogrevatel_v_dome_current",
+        "state": "0.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "A",
+            "device_class": "current",
+            "friendly_name": "Обогреватель в доме Current"
+        },
+        "last_changed": "2024-07-09T10:17:01.392107+00:00",
+        "last_updated": "2024-07-09T10:17:01.392107+00:00",
+        "context": {
+            "id": "01J2BFY8PGR7CB360P02ZMM0RE",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.obogrevatel_v_dome_power",
+        "state": "0.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "Обогреватель в доме Мощность"
+        },
+        "last_changed": "2024-07-09T10:17:01.393469+00:00",
+        "last_updated": "2024-07-09T10:17:01.393469+00:00",
+        "context": {
+            "id": "01J2BFY8PHY10J5NDBNHQGS6EQ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.obogrevatel_v_dome_voltage",
+        "state": "234.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "V",
+            "device_class": "voltage",
+            "friendly_name": "Обогреватель в доме Напряжение"
+        },
+        "last_changed": "2024-07-09T10:45:16.802717+00:00",
+        "last_updated": "2024-07-09T10:45:16.802717+00:00",
+        "context": {
+            "id": "01J2BHJ0C2H66C3B104JH2GR94",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.obogrevatel_v_dome_socket_1",
+        "state": "off",
+        "attributes": {
+            "device_class": "outlet",
+            "friendly_name": "Обогреватель в доме Розетка 1"
+        },
+        "last_changed": "2024-07-09T10:45:06.652182+00:00",
+        "last_updated": "2024-07-09T10:45:06.652182+00:00",
+        "context": {
+            "id": "01J2BHHNKT59R6MN2226SQVC98",
+            "parent_id": null,
+            "user_id": "fcae687c9d4641bea1219ed389297c5d"
+        }
+    },
+    {
+        "entity_id": "switch.kompiuter_socket_1",
+        "state": "unavailable",
+        "attributes": {
+            "device_class": "outlet",
+            "friendly_name": "Компьютер Розетка 1"
+        },
+        "last_changed": "2024-06-20T10:01:59.334742+00:00",
+        "last_updated": "2024-06-27T20:00:39.154008+00:00",
+        "context": {
+            "id": "01J1DMJ9QJSCXWJZEJP2ZDC88M",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_06_teplitsa_reboot",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "Камера 06 - Теплица Reboot"
+        },
+        "last_changed": "2024-06-20T10:02:09.207596+00:00",
+        "last_updated": "2024-06-20T10:02:09.207596+00:00",
+        "context": {
+            "id": "01J0THHCDQRR4ZCG8E3BCG9ZJH",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_06_teplitsa_set_system_date_and_time",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Камера 06 - Теплица Set System Date and Time"
+        },
+        "last_changed": "2024-06-20T10:02:09.208993+00:00",
+        "last_updated": "2024-06-20T10:02:09.208993+00:00",
+        "context": {
+            "id": "01J0THHCDRMNC0PBYGPEF0F7QP",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_06_teplitsa_mainstreamprofile",
+        "state": "idle",
+        "attributes": {
+            "access_token": "4a29ae0c522fc5e760ee064cfa1796595e675d964c746a8f9cfa09e726dc8b",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_06_teplitsa_mainstreamprofile?token=4a29ae0c522fc5e760ee064cfa1796595e675d964c746a8f9cfa09e726dc8b",
+            "friendly_name": "Камера 06 - Теплица MainStreamProfile",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.329933+00:00",
+        "last_updated": "2024-07-09T10:59:44.440723+00:00",
+        "context": {
+            "id": "01J2BJCFNRBM0C8RHSH8E5RBJ6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_06_teplitsa_secondstreamprofile",
+        "state": "idle",
+        "attributes": {
+            "access_token": "e0c4dad9b105de9a2926bd53dcb58bae1fccbfb9235908735f5a606e9fe91f59",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_06_teplitsa_secondstreamprofile?token=e0c4dad9b105de9a2926bd53dcb58bae1fccbfb9235908735f5a606e9fe91f59",
+            "friendly_name": "Камера 06 - Теплица SecondStreamProfile\"",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.331389+00:00",
+        "last_updated": "2024-07-09T10:59:44.441190+00:00",
+        "context": {
+            "id": "01J2BJCFNSQJ4RZTMCB5ABK3A4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_06_teplitsa_autofocus",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:focus-auto",
+            "friendly_name": "Камера 06 - Теплица Autofocus"
+        },
+        "last_changed": "2024-06-20T10:02:09.371705+00:00",
+        "last_updated": "2024-06-20T10:02:09.371705+00:00",
+        "context": {
+            "id": "01J0THHCJVXHSMXE2YXFX5ZE4A",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_06_teplitsa_ir_lamp",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:spotlight-beam",
+            "friendly_name": "Камера 06 - Теплица IR lamp"
+        },
+        "last_changed": "2024-06-20T10:02:09.373078+00:00",
+        "last_updated": "2024-06-20T10:02:09.373078+00:00",
+        "context": {
+            "id": "01J0THHCJXRAMXYCCJF2PSDT9E",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_06_teplitsa_wiper",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:wiper",
+            "friendly_name": "Камера 06 - Теплица Wiper"
+        },
+        "last_changed": "2024-06-20T10:02:09.374184+00:00",
+        "last_updated": "2024-06-20T10:02:09.374184+00:00",
+        "context": {
+            "id": "01J0THHCJYK6PN9X3WNCGZX82N",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_07_dvor_2_reboot",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "Камера 07 - Двор 2 Reboot"
+        },
+        "last_changed": "2024-06-20T10:02:09.439866+00:00",
+        "last_updated": "2024-06-20T10:02:09.439866+00:00",
+        "context": {
+            "id": "01J0THHCMZ467CJW2855E4720P",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_07_dvor_2_set_system_date_and_time",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Камера 07 - Двор 2 Set System Date and Time"
+        },
+        "last_changed": "2024-06-20T10:02:09.441199+00:00",
+        "last_updated": "2024-06-20T10:02:09.441199+00:00",
+        "context": {
+            "id": "01J0THHCN1SN6BZBKXACKJQT8J",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_07_dvor_2_mainstreamprofile",
+        "state": "idle",
+        "attributes": {
+            "access_token": "3d7324bdcd69dfe03c63f6099012095a1a5fde511b84541db49b74d3d960dd81",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_07_dvor_2_mainstreamprofile?token=3d7324bdcd69dfe03c63f6099012095a1a5fde511b84541db49b74d3d960dd81",
+            "friendly_name": "Камера 07 - Двор 2 MainStreamProfile",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.442633+00:00",
+        "last_updated": "2024-07-09T10:59:44.441578+00:00",
+        "context": {
+            "id": "01J2BJCFNS9YQZGZ8CDAWFG7MY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_07_dvor_2_secondstreamprofile",
+        "state": "idle",
+        "attributes": {
+            "access_token": "ef92a12c227302d5d70641e7bdcb5a84b70145df667c04d69fe1c83bf9354322",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_07_dvor_2_secondstreamprofile?token=ef92a12c227302d5d70641e7bdcb5a84b70145df667c04d69fe1c83bf9354322",
+            "friendly_name": "Камера 07 - Двор 2 SecondStreamProfile\"",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.443864+00:00",
+        "last_updated": "2024-07-09T10:59:44.441939+00:00",
+        "context": {
+            "id": "01J2BJCFNSZHY9XGEZTX6ZPDBW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.kamera_07_dvor_2_cell_motion_detection",
+        "state": "off",
+        "attributes": {
+            "device_class": "motion"
+        },
+        "last_changed": "2024-06-20T10:57:11.020861+00:00",
+        "last_updated": "2024-06-20T10:57:11.020861+00:00",
+        "context": {
+            "id": "01J0TMP4VC65TC23SWGV058MYM",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_07_dvor_2_autofocus",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:focus-auto",
+            "friendly_name": "Камера 07 - Двор 2 Autofocus"
+        },
+        "last_changed": "2024-06-20T10:02:09.446720+00:00",
+        "last_updated": "2024-06-20T10:02:09.446720+00:00",
+        "context": {
+            "id": "01J0THHCN6T30CD4BG877WQQ0E",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_07_dvor_2_ir_lamp",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:spotlight-beam",
+            "friendly_name": "Камера 07 - Двор 2 IR lamp"
+        },
+        "last_changed": "2024-06-20T10:02:09.447877+00:00",
+        "last_updated": "2024-06-20T10:02:09.447877+00:00",
+        "context": {
+            "id": "01J0THHCN7S376TNCB7RN74V23",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_07_dvor_2_wiper",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:wiper",
+            "friendly_name": "Камера 07 - Двор 2 Wiper"
+        },
+        "last_changed": "2024-06-20T10:02:09.448892+00:00",
+        "last_updated": "2024-06-20T10:02:09.448892+00:00",
+        "context": {
+            "id": "01J0THHCN8W6QJQ7DKRBBGS09Y",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_02_dom_reboot",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "Камера 02 - Дом Reboot"
+        },
+        "last_changed": "2024-06-20T10:02:09.487408+00:00",
+        "last_updated": "2024-06-20T10:02:09.487408+00:00",
+        "context": {
+            "id": "01J0THHCPF9X9ZW5Q5DXBVAF1N",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_02_dom_set_system_date_and_time",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Камера 02 - Дом Set System Date and Time"
+        },
+        "last_changed": "2024-06-20T10:02:09.488674+00:00",
+        "last_updated": "2024-06-20T10:02:09.488674+00:00",
+        "context": {
+            "id": "01J0THHCPGRC308CJWJ1R8C0YW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_02_dom_mainstreamprofile",
+        "state": "idle",
+        "attributes": {
+            "access_token": "17eeca4feeedf7d57399d7ee70b3bce1fe52c347f23507d62feb8ba9947cae8d",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_02_dom_mainstreamprofile?token=17eeca4feeedf7d57399d7ee70b3bce1fe52c347f23507d62feb8ba9947cae8d",
+            "friendly_name": "Камера 02 - Дом MainStreamProfile",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.490048+00:00",
+        "last_updated": "2024-07-09T10:59:44.442296+00:00",
+        "context": {
+            "id": "01J2BJCFNT8FRGDMPXJCP36KNT",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_02_dom_secondstreamprofile",
+        "state": "idle",
+        "attributes": {
+            "access_token": "3aad827719ebd01bb6c495ebdfe674eaadfc3eb4cd4e90a6ac8547b2a2b767c6",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_02_dom_secondstreamprofile?token=3aad827719ebd01bb6c495ebdfe674eaadfc3eb4cd4e90a6ac8547b2a2b767c6",
+            "friendly_name": "Камера 02 - Дом SecondStreamProfile\"",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.491152+00:00",
+        "last_updated": "2024-07-09T10:59:44.442641+00:00",
+        "context": {
+            "id": "01J2BJCFNTEYEPMW8VEZDX8W7T",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.kamera_02_dom_cell_motion_detection",
+        "state": "off",
+        "attributes": {
+            "device_class": "motion"
+        },
+        "last_changed": "2024-06-20T15:59:49.870053+00:00",
+        "last_updated": "2024-06-20T15:59:49.870053+00:00",
+        "context": {
+            "id": "01J0V60A3E10D128QQN61VSB6J",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_02_dom_autofocus",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:focus-auto",
+            "friendly_name": "Камера 02 - Дом Autofocus"
+        },
+        "last_changed": "2024-06-20T10:02:09.494107+00:00",
+        "last_updated": "2024-06-20T10:02:09.494107+00:00",
+        "context": {
+            "id": "01J0THHCPPEBXW40FJ8S2AS8CK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_02_dom_ir_lamp",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:spotlight-beam",
+            "friendly_name": "Камера 02 - Дом IR lamp"
+        },
+        "last_changed": "2024-06-20T10:02:09.495156+00:00",
+        "last_updated": "2024-06-20T10:02:09.495156+00:00",
+        "context": {
+            "id": "01J0THHCPQX0Y34YEPX3QY1XGW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_02_dom_wiper",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:wiper",
+            "friendly_name": "Камера 02 - Дом Wiper"
+        },
+        "last_changed": "2024-06-20T10:02:09.496275+00:00",
+        "last_updated": "2024-06-20T10:02:09.496275+00:00",
+        "context": {
+            "id": "01J0THHCPR50X0WXC268FNSHTG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_03_reka_reboot",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "Камера 03 - Река Reboot"
+        },
+        "last_changed": "2024-06-20T10:02:09.527680+00:00",
+        "last_updated": "2024-06-20T10:02:09.527680+00:00",
+        "context": {
+            "id": "01J0THHCQQ74XMSYSW81183VF4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_03_reka_set_system_date_and_time",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Камера 03 - Река Set System Date and Time"
+        },
+        "last_changed": "2024-06-20T10:02:09.529202+00:00",
+        "last_updated": "2024-06-20T10:02:09.529202+00:00",
+        "context": {
+            "id": "01J0THHCQS2QBJ4J2HZ0RM3P98",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_03_reka_mainstreamprofile",
+        "state": "idle",
+        "attributes": {
+            "access_token": "c6805a0f8e61be0331e2e5a1a56457951de881c8dafa4f32212a5ea594313cda",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_03_reka_mainstreamprofile?token=c6805a0f8e61be0331e2e5a1a56457951de881c8dafa4f32212a5ea594313cda",
+            "friendly_name": "Камера 03 - Река MainStreamProfile",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.530964+00:00",
+        "last_updated": "2024-07-09T10:59:44.442982+00:00",
+        "context": {
+            "id": "01J2BJCFNTEDQ7E4SGAZNQTN12",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_03_reka_secondstreamprofile",
+        "state": "idle",
+        "attributes": {
+            "access_token": "2ae77ee5a63eaaa956534010bfc15cd88a2f97a5bb5cd06d813d326acd97ac7b",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_03_reka_secondstreamprofile?token=2ae77ee5a63eaaa956534010bfc15cd88a2f97a5bb5cd06d813d326acd97ac7b",
+            "friendly_name": "Камера 03 - Река SecondStreamProfile\"",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.532527+00:00",
+        "last_updated": "2024-07-09T10:59:44.443372+00:00",
+        "context": {
+            "id": "01J2BJCFNVZ6C180BBYAASG9Q4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.kamera_03_reka_cell_motion_detection",
+        "state": "off",
+        "attributes": {
+            "device_class": "motion"
+        },
+        "last_changed": "2024-06-20T16:00:01.930577+00:00",
+        "last_updated": "2024-06-20T16:00:01.930577+00:00",
+        "context": {
+            "id": "01J0V60NWAD093P8B2Q1C73E8B",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_03_reka_autofocus",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:focus-auto",
+            "friendly_name": "Камера 03 - Река Autofocus"
+        },
+        "last_changed": "2024-06-20T10:02:09.536130+00:00",
+        "last_updated": "2024-06-20T10:02:09.536130+00:00",
+        "context": {
+            "id": "01J0THHCR03CPSJZMS29JKKAD7",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_03_reka_ir_lamp",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:spotlight-beam",
+            "friendly_name": "Камера 03 - Река IR lamp"
+        },
+        "last_changed": "2024-06-20T10:02:09.537538+00:00",
+        "last_updated": "2024-06-20T10:02:09.537538+00:00",
+        "context": {
+            "id": "01J0THHCR1M2928GY7KMHKWPC5",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_03_reka_wiper",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:wiper",
+            "friendly_name": "Камера 03 - Река Wiper"
+        },
+        "last_changed": "2024-06-20T10:02:09.538817+00:00",
+        "last_updated": "2024-06-20T10:02:09.538817+00:00",
+        "context": {
+            "id": "01J0THHCR2MBWZSQNXQHP7NBHW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.nvt_reboot",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "Камера 01 - Двор Reboot"
+        },
+        "last_changed": "2024-06-20T10:02:09.612391+00:00",
+        "last_updated": "2024-06-20T10:02:09.612391+00:00",
+        "context": {
+            "id": "01J0THHCTC2B56NAT90JZAWFK9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.nvt_set_system_date_and_time",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Камера 01 - Двор Set System Date and Time"
+        },
+        "last_changed": "2024-06-20T10:02:09.613660+00:00",
+        "last_updated": "2024-06-20T10:02:09.613660+00:00",
+        "context": {
+            "id": "01J0THHCTDAZFFPZ13RGD4E0VK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.nvt_mainstream",
+        "state": "idle",
+        "attributes": {
+            "access_token": "bc493250dbfe89a3918404915c2fa95a423134fad8f7d16d82579e362bbfd53a",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.nvt_mainstream?token=bc493250dbfe89a3918404915c2fa95a423134fad8f7d16d82579e362bbfd53a",
+            "friendly_name": "Камера 01 - Двор mainStream",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.615004+00:00",
+        "last_updated": "2024-07-09T10:59:44.443729+00:00",
+        "context": {
+            "id": "01J2BJCFNVAEF85FGGKRVYRX58",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.nvt_substream",
+        "state": "idle",
+        "attributes": {
+            "access_token": "1dcea216e2abaabef4137a1838485b87fbb7b066dd4edcdbc1592faafdffc216",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.nvt_substream?token=1dcea216e2abaabef4137a1838485b87fbb7b066dd4edcdbc1592faafdffc216",
+            "friendly_name": "NVT subStream",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.616164+00:00",
+        "last_updated": "2024-07-09T10:59:44.444076+00:00",
+        "context": {
+            "id": "01J2BJCFNWWZM1ER7V8YWEHH8E",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.nvt_digital_input",
+        "state": "on",
+        "attributes": {
+            "friendly_name": "Камера 01 - Двор Digital Input"
+        },
+        "last_changed": "2024-06-20T10:02:09.617388+00:00",
+        "last_updated": "2024-06-20T10:02:09.617388+00:00",
+        "context": {
+            "id": "01J0THHCTHHXABS36GW18YPAAM",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.nvt_cell_motion_detection",
+        "state": "on",
+        "attributes": {
+            "device_class": "motion"
+        },
+        "last_changed": "2024-06-20T10:02:09.618334+00:00",
+        "last_updated": "2024-06-20T10:02:09.618334+00:00",
+        "context": {
+            "id": "01J0THHCTJBZTZNKP0G7X4JX52",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.nvt_motion_alarm",
+        "state": "on",
+        "attributes": {
+            "device_class": "motion"
+        },
+        "last_changed": "2024-06-20T10:02:09.619180+00:00",
+        "last_updated": "2024-06-20T10:02:09.619180+00:00",
+        "context": {
+            "id": "01J0THHCTKG2HNS0SYRF7XST6B",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.nvt_tamper_detection",
+        "state": "on",
+        "attributes": {
+            "device_class": "problem"
+        },
+        "last_changed": "2024-06-20T10:02:09.620113+00:00",
+        "last_updated": "2024-06-20T10:02:09.620113+00:00",
+        "context": {
+            "id": "01J0THHCTMQ9WJ0Y06Y5D5FQC3",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.nvt_relay_triggered",
+        "state": "off",
+        "attributes": {},
+        "last_changed": "2024-06-20T10:02:09.620964+00:00",
+        "last_updated": "2024-06-20T10:02:09.620964+00:00",
+        "context": {
+            "id": "01J0THHCTMNGZ7NA0D7CN0K14Y",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.nvt_autofocus",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:focus-auto",
+            "friendly_name": "Камера 01 - Двор Autofocus"
+        },
+        "last_changed": "2024-06-20T10:02:09.622459+00:00",
+        "last_updated": "2024-06-20T10:02:09.622459+00:00",
+        "context": {
+            "id": "01J0THHCTPNG3462C9G765JQXP",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.nvt_ir_lamp",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:spotlight-beam",
+            "friendly_name": "Камера 01 - Двор IR lamp"
+        },
+        "last_changed": "2024-06-20T10:02:09.623575+00:00",
+        "last_updated": "2024-06-20T10:02:09.623575+00:00",
+        "context": {
+            "id": "01J0THHCTQ4RD30HWK6RWYV3GR",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.nvt_wiper",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:wiper",
+            "friendly_name": "Камера 01 - Двор Wiper"
+        },
+        "last_changed": "2024-06-20T10:02:09.624567+00:00",
+        "last_updated": "2024-06-20T10:02:09.624567+00:00",
+        "context": {
+            "id": "01J0THHCTRE4XNDTZ4CGM0YVDD",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_08_besedka_reboot",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "Камера 08 - Беседка Reboot"
+        },
+        "last_changed": "2024-06-20T10:02:09.678171+00:00",
+        "last_updated": "2024-06-20T10:02:09.678171+00:00",
+        "context": {
+            "id": "01J0THHCWENMDB7W947NSZ35YJ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_08_besedka_set_system_date_and_time",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Камера 08 - Беседка Set System Date and Time"
+        },
+        "last_changed": "2024-06-20T10:02:09.679528+00:00",
+        "last_updated": "2024-06-20T10:02:09.679528+00:00",
+        "context": {
+            "id": "01J0THHCWFN6ZEVPG6G8940WD0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_08_besedka_mainstream",
+        "state": "idle",
+        "attributes": {
+            "access_token": "da1c907240ad5250de2f335fede260308b618a051c89012305903045e55952ec",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_08_besedka_mainstream?token=da1c907240ad5250de2f335fede260308b618a051c89012305903045e55952ec",
+            "friendly_name": "Камера 08 - Беседка mainStream",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.681013+00:00",
+        "last_updated": "2024-07-09T10:59:44.444419+00:00",
+        "context": {
+            "id": "01J2BJCFNW1F0AC8622C9NHAST",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_08_besedka_secondstream",
+        "state": "idle",
+        "attributes": {
+            "access_token": "96bc413dd90f21e037646fab2ca592e97ebabcf90a8589fc99a5b3d92c8c1d4",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_08_besedka_secondstream?token=96bc413dd90f21e037646fab2ca592e97ebabcf90a8589fc99a5b3d92c8c1d4",
+            "friendly_name": "Камера 08 - Беседка secondStream",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.682112+00:00",
+        "last_updated": "2024-07-09T10:59:44.444762+00:00",
+        "context": {
+            "id": "01J2BJCFNW7M0DHG5ZX5GFDNPM",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_08_besedka_thirdstream",
+        "state": "idle",
+        "attributes": {
+            "access_token": "9f5e88a4f7624c8d2201b50c7545abdf69f6fd6ce0d825b62521c16030f97550",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_08_besedka_thirdstream?token=9f5e88a4f7624c8d2201b50c7545abdf69f6fd6ce0d825b62521c16030f97550",
+            "friendly_name": "Камера 08 - Беседка thirdStream",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.683099+00:00",
+        "last_updated": "2024-07-09T10:59:44.445096+00:00",
+        "context": {
+            "id": "01J2BJCFNXKYZVXDH1QFZDK965",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_08_besedka_autofocus",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:focus-auto",
+            "friendly_name": "Камера 08 - Беседка Autofocus"
+        },
+        "last_changed": "2024-06-20T10:02:09.685027+00:00",
+        "last_updated": "2024-06-20T10:02:09.685027+00:00",
+        "context": {
+            "id": "01J0THHCWNXP883JT1AA6NCJTZ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_08_besedka_ir_lamp",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:spotlight-beam",
+            "friendly_name": "Камера 08 - Беседка IR lamp"
+        },
+        "last_changed": "2024-06-20T10:02:09.686184+00:00",
+        "last_updated": "2024-06-20T10:02:09.686184+00:00",
+        "context": {
+            "id": "01J0THHCWPV7SDYY2EACXYEEFG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_08_besedka_wiper",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:wiper",
+            "friendly_name": "Камера 08 - Беседка Wiper"
+        },
+        "last_changed": "2024-06-20T10:02:09.687191+00:00",
+        "last_updated": "2024-06-20T10:02:09.687191+00:00",
+        "context": {
+            "id": "01J0THHCWQ37SN02MXHC0WKP1S",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.111_reboot",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "Камера 04 - Ворота Reboot"
+        },
+        "last_changed": "2024-06-20T10:02:09.768886+00:00",
+        "last_updated": "2024-06-20T10:02:09.768886+00:00",
+        "context": {
+            "id": "01J0THHCZ8D33CNTCJ1MY22S48",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.111_set_system_date_and_time",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Камера 04 - Ворота Set System Date and Time"
+        },
+        "last_changed": "2024-06-20T10:02:09.770113+00:00",
+        "last_updated": "2024-06-20T10:02:09.770113+00:00",
+        "context": {
+            "id": "01J0THHCZAG4Z7RRNPSETZ5CZF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.111_mainstream",
+        "state": "idle",
+        "attributes": {
+            "access_token": "4c3b7977931df89ed8b975e2838ed9a2e551d791f5bf762bade65d61029421c4",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.111_mainstream?token=4c3b7977931df89ed8b975e2838ed9a2e551d791f5bf762bade65d61029421c4",
+            "friendly_name": "Камера 04 - Ворота mainStream",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.771463+00:00",
+        "last_updated": "2024-07-09T10:59:44.445426+00:00",
+        "context": {
+            "id": "01J2BJCFNXWYR8D3YH96HEB8JE",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.111_substream",
+        "state": "idle",
+        "attributes": {
+            "access_token": "64a4f9bda7c71ac9c3db240c0297fd24703ae25a3cd81aac30f9d59951c8ab69",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.111_substream?token=64a4f9bda7c71ac9c3db240c0297fd24703ae25a3cd81aac30f9d59951c8ab69",
+            "friendly_name": "Камера 04 - Ворота subStream",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-20T10:02:09.772545+00:00",
+        "last_updated": "2024-07-09T10:59:44.445744+00:00",
+        "context": {
+            "id": "01J2BJCFNX43G4ZYD21ZHG81NV",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.111_digital_input",
+        "state": "on",
+        "attributes": {
+            "friendly_name": "Камера 04 - Ворота Digital Input"
+        },
+        "last_changed": "2024-06-20T10:02:09.773792+00:00",
+        "last_updated": "2024-06-20T10:02:09.773792+00:00",
+        "context": {
+            "id": "01J0THHCZDCTC91RZT92QV2EV4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.111_motion_alarm",
+        "state": "on",
+        "attributes": {
+            "device_class": "motion",
+            "friendly_name": "Камера 04 - Ворота motion alarm"
+        },
+        "last_changed": "2024-06-20T10:02:09.774735+00:00",
+        "last_updated": "2024-06-20T10:02:09.774735+00:00",
+        "context": {
+            "id": "01J0THHCZEM4G351JM1C51DSAR",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.111_tamper_detection",
+        "state": "on",
+        "attributes": {
+            "device_class": "problem",
+            "friendly_name": "Камера 04 - Ворота tamper detection"
+        },
+        "last_changed": "2024-06-20T10:02:09.787110+00:00",
+        "last_updated": "2024-06-20T10:02:09.787110+00:00",
+        "context": {
+            "id": "01J0THHCZVNZX0Y4ETNW3CH38X",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.111_cell_motion_detection",
+        "state": "on",
+        "attributes": {
+            "device_class": "motion",
+            "friendly_name": "Камера 04 - Ворота cell motion detection"
+        },
+        "last_changed": "2024-06-20T10:02:09.788494+00:00",
+        "last_updated": "2024-06-20T10:02:09.788494+00:00",
+        "context": {
+            "id": "01J0THHCZW3BTBDAYRP7SRJS1G",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.111_autofocus",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:focus-auto",
+            "friendly_name": "Камера 04 - Ворота Autofocus"
+        },
+        "last_changed": "2024-06-20T10:02:09.790190+00:00",
+        "last_updated": "2024-06-20T10:02:09.790190+00:00",
+        "context": {
+            "id": "01J0THHCZYXM35084DMMP9FERK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.111_ir_lamp",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:spotlight-beam",
+            "friendly_name": "Камера 04 - Ворота IR lamp"
+        },
+        "last_changed": "2024-06-20T10:02:09.791273+00:00",
+        "last_updated": "2024-06-20T10:02:09.791273+00:00",
+        "context": {
+            "id": "01J0THHCZZY1P0W03XX6QR9CHY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.111_wiper",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:wiper",
+            "friendly_name": "Камера 04 - Ворота Wiper"
+        },
+        "last_changed": "2024-06-20T10:02:09.792388+00:00",
+        "last_updated": "2024-06-20T10:02:09.792388+00:00",
+        "context": {
+            "id": "01J0THHD00MB6K8PBS1R66X5VG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_09_kolodets_reboot",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "Камера 09 - Колодец Reboot"
+        },
+        "last_changed": "2024-06-25T06:18:09.957448+00:00",
+        "last_updated": "2024-06-25T06:18:09.957448+00:00",
+        "context": {
+            "id": "01J170PV55D4VQVFHVSX5YM70Z",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.kamera_09_kolodets_set_system_date_and_time",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Камера 09 - Колодец Set System Date and Time"
+        },
+        "last_changed": "2024-06-25T06:18:09.958992+00:00",
+        "last_updated": "2024-06-25T06:18:09.958992+00:00",
+        "context": {
+            "id": "01J170PV56DXR02DH79ZK0SHX6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_09_kolodets_mainstream",
+        "state": "idle",
+        "attributes": {
+            "access_token": "c5273fdd2ee25aea04aafb63575f6dc59f49eb7aa66fe9c9017866c1839375e1",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_09_kolodets_mainstream?token=c5273fdd2ee25aea04aafb63575f6dc59f49eb7aa66fe9c9017866c1839375e1",
+            "friendly_name": "Камера 09 - Колодец mainStream",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-25T06:18:09.960575+00:00",
+        "last_updated": "2024-07-09T10:59:44.446082+00:00",
+        "context": {
+            "id": "01J2BJCFNYV6JQS62XKNA5RY7S",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_09_kolodets_autofocus",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:focus-auto",
+            "friendly_name": "Камера 09 - Колодец Autofocus"
+        },
+        "last_changed": "2024-06-25T06:18:09.970130+00:00",
+        "last_updated": "2024-06-25T06:18:09.970130+00:00",
+        "context": {
+            "id": "01J170PV5JKYD8W7GWY96J4RN7",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.kamera_09_kolodets_ir_lamp",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:spotlight-beam",
+            "friendly_name": "Камера 09 - Колодец IR lamp"
+        },
+        "last_changed": "2024-06-25T06:18:09.971450+00:00",
+        "last_updated": "2024-06-25T06:18:09.971450+00:00",
+        "context": {
+            "id": "01J170PV5K5X6PMWXPXQSEZF2Y",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.2c_6f_51_09_11_9e",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.168",
+            "mac": "2C:6F:51:09:11:9E",
+            "interface": "Home",
+            "friendly_name": "Камера 09 - Колодец"
+        },
+        "last_changed": "2024-07-07T08:44:21.154975+00:00",
+        "last_updated": "2024-07-07T08:44:21.154975+00:00",
+        "context": {
+            "id": "01J265V4S2ZK9BFQ79ER0FTRSC",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_09_kolodets_secondstream",
+        "state": "idle",
+        "attributes": {
+            "access_token": "ad35af1a579ffdb1b7f4fa63e75325ee5c8dbaa3105e46fe350d60bf0a5b4072",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_09_kolodets_secondstream?token=ad35af1a579ffdb1b7f4fa63e75325ee5c8dbaa3105e46fe350d60bf0a5b4072",
+            "friendly_name": "Камера 09 - Колодец secondStream",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-25T06:18:09.961772+00:00",
+        "last_updated": "2024-07-09T10:59:44.446424+00:00",
+        "context": {
+            "id": "01J2BJCFNY49GTQAFGFQSS8RWP",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.kamera_09_kolodets_thirdstream",
+        "state": "idle",
+        "attributes": {
+            "access_token": "cf176e94d36b305924318732de22e5713c42ecc7b5c5441e20b291abed7b20fd",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.kamera_09_kolodets_thirdstream?token=cf176e94d36b305924318732de22e5713c42ecc7b5c5441e20b291abed7b20fd",
+            "friendly_name": "Камера 09 - Колодец thirdStream",
+            "supported_features": 2
+        },
+        "last_changed": "2024-06-25T06:18:09.967699+00:00",
+        "last_updated": "2024-07-09T10:59:44.446759+00:00",
+        "context": {
+            "id": "01J2BJCFNYWE27GCVY3H1P6829",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.irrigation_water_in_barrel",
+        "state": "on",
+        "attributes": {
+            "device_class": "moisture",
+            "friendly_name": "Irrigation Water in barrel"
+        },
+        "last_changed": "2024-07-07T09:33:20.524127+00:00",
+        "last_updated": "2024-07-07T10:34:34.125971+00:00",
+        "context": {
+            "id": "01J26C4YRDHT6VYZQQ0HNAAJJ9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.irrigation_pulse_meter",
+        "state": "0.00",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "pulses/min",
+            "icon": "mdi:pulse",
+            "friendly_name": "Irrigation Pulse Meter"
+        },
+        "last_changed": "2024-07-07T10:27:54.660471+00:00",
+        "last_updated": "2024-07-07T10:27:54.660471+00:00",
+        "context": {
+            "id": "01J26BRRN4271C94EJA4HVTFZ0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.irrigation_total_pulses",
+        "state": "1656",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "pulses",
+            "icon": "mdi:pulse",
+            "friendly_name": "Irrigation Total Pulses"
+        },
+        "last_changed": "2024-07-07T10:27:55.079630+00:00",
+        "last_updated": "2024-07-07T10:27:55.079630+00:00",
+        "context": {
+            "id": "01J26BRS27FZE3DXWZK381RZ82",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.irrigation_water_line_1",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Irrigation Water line #1"
+        },
+        "last_changed": "2024-07-07T10:27:55.034025+00:00",
+        "last_updated": "2024-07-07T10:27:55.034025+00:00",
+        "context": {
+            "id": "01J26BRRZ3TSH7HGB2V1YE8C78",
+            "parent_id": null,
+            "user_id": "fcae687c9d4641bea1219ed389297c5d"
+        }
+    },
+    {
+        "entity_id": "switch.irrigation_water_line_2",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Irrigation Water line #2"
+        },
+        "last_changed": "2024-07-07T10:27:55.061201+00:00",
+        "last_updated": "2024-07-07T10:27:55.061201+00:00",
+        "context": {
+            "id": "01J26BRRZ3TSH7HGB2V1YE8C78",
+            "parent_id": null,
+            "user_id": "fcae687c9d4641bea1219ed389297c5d"
+        }
+    },
+    {
+        "entity_id": "switch.irrigation_pump",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Irrigation Pump"
+        },
+        "last_changed": "2024-07-07T10:27:55.005536+00:00",
+        "last_updated": "2024-07-07T10:27:55.005536+00:00",
+        "context": {
+            "id": "01J26BRRZ3TSH7HGB2V1YE8C78",
+            "parent_id": null,
+            "user_id": "fcae687c9d4641bea1219ed389297c5d"
+        }
+    },
+    {
+        "entity_id": "device_tracker.irrigation",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.1.142",
+            "mac": "8C:AA:B5:52:FD:D5",
+            "interface": "Home",
+            "friendly_name": "irrigation"
+        },
+        "last_changed": "2024-07-07T08:54:22.702826+00:00",
+        "last_updated": "2024-07-07T08:54:22.702826+00:00",
+        "context": {
+            "id": "01J266DG7EQ5A18TD6CQ802ZC5",
+            "parent_id": null,
+            "user_id": null
+        }
+    }
+]

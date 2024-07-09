@@ -14,6 +14,7 @@ import axios from "axios";
 import cloneDeep from "lodash/clone";
 import { Telegraf, Markup } from "telegraf";
 import { DachaService } from "./dacha.service";
+import { HAService } from "./ha.service";
 import { Context } from "telegraf";
 import { ReverseTextPipe } from "@/common/pipes/reverse-text.pipe";
 import { ResponseTimeInterceptor } from "@/common/interceptors/response-time.interceptor";
@@ -33,11 +34,12 @@ export class DachaUpdate {
   constructor(
     private readonly bot: Telegraf<Context>,
     private readonly dachaService: DachaService,
+    private readonly haService: HAService,
   ) { }
 
   @Start()
   async onStart(): Promise<string> {
-    return "START!!!";
+    return "Я дачный бот. Чего надо?";
   }
 
   @Help()
@@ -52,7 +54,7 @@ export class DachaUpdate {
     const buttons = [];
     const buttonsRow = [];
     cameras.forEach((cam, idx) => {
-      buttonsRow.push(Markup.button.callback(cam.short_name, "camera" + cam.id));
+      buttonsRow.push(Markup.button.callback(cam.short_name, "camera-" + cam.id));
       if (buttonsRow.length == 3) {
         buttons.push(cloneDeep(buttonsRow));
         buttonsRow.length = 0;
@@ -61,7 +63,7 @@ export class DachaUpdate {
     if (buttonsRow.length) {
       buttons.push(cloneDeep(buttonsRow));
     }
-    buttons.push([Markup.button.callback("Все камеры", "camera_all")]);
+    buttons.push([Markup.button.callback("Все камеры", "camera-all")]);
 
     ctx.reply("Наши камеры:", Markup.inlineKeyboard(buttons));
   }
@@ -88,7 +90,7 @@ export class DachaUpdate {
     console.log(">>> devices:", devices);
     const buttons = [];
     devices.forEach((dev, idx) => {
-      buttons.push([Markup.button.callback(dev.name, "device" + dev.id)]);
+      buttons.push([Markup.button.callback(dev.name, "device-" + dev.id)]);
     });
     ctx.reply("Наши устройства:", Markup.inlineKeyboard(buttons));
   }
@@ -98,12 +100,12 @@ export class DachaUpdate {
     const devices = await this.dachaService.findAllControlledDevices();
     const buttons = [];
     devices.forEach((dev, idx) => {
-      buttons.push([Markup.button.callback(dev.name, "control" + dev.id + "-state")]);
+      buttons.push([Markup.button.callback(dev.name, "control-" + dev.id)]);
     });
     ctx.reply("Контролируемые устройства:", Markup.inlineKeyboard(buttons));
   }
 
-  @Action(/camera(\d+)/gm)
+  @Action(/camera-(\d+)/gm)
   async cameraAction(@Ctx() ctx: Context) {
     if ("match" in ctx) {
       const camId: number = ctx.match[1];
@@ -114,7 +116,7 @@ export class DachaUpdate {
     }
   }
 
-  @Action("camera_all")
+  @Action("camera-all")
   async cameraAllAction(@Ctx() ctx: Context) {
     const cams = await this.dachaService.findAllCameras();
     cams.forEach(async (cam) => this.showCamPicture(cam, ctx));
@@ -123,21 +125,27 @@ export class DachaUpdate {
   async showCamPicture(cam: Camera, ctx: Context) {
     const ha = () => { return axios.create({ baseURL: process.env.HA_API_URL }); }
     const cs = cam.second == "" ? cam.main : cam.second;
-    ha().get("/states/" + cs, { headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + process.env.HA_TOKEN } })
+
+    this.haService.getCamPicture(cs).subscribe({
+      next: res => ctx.replyWithPhoto(process.env.HA_URL + res.data.attributes.entity_picture, { caption: cam.name }),
+      error: err => ctx.reply("Ошибка камеры " + cam.name + ":" + err.message),
+    });
+    
+/*     ha().get("/states/" + cs, { headers: { "Content-Type": "application/json", "Authorization": "Bearer " + process.env.HA_TOKEN } })
       .then((res) => ctx.replyWithPhoto(process.env.HA_URL + res.data.attributes.entity_picture, { caption: cam.name }))
       .catch((err: Error) => ctx.reply("Ошибка камеры " + cam.name + ":" + err.message));
-  }
+ */  }
 
-  @Action(/device(\d+)/gm)
+  @Action(/device-(\d+)/gm)
   async deviceAction(@Ctx() ctx: Context) {
     if ("match" in ctx) {
       const devId: number = ctx.match[1];
       const dev = await this.dachaService.getDevice(devId);
       if (dev) {
-        ctx.replyWithMarkdownV2(`Состояние устройства *${dev.name}:*`);
+        ctx.replyWithMarkdownV2(`deviceAction Состояние устройства *${dev.name}:*`);
         dev.sensors.forEach(async (sensor) => {
           const ha = () => { return axios.create({ baseURL: process.env.HA_API_URL }); }
-          ha().get("/states/" + sensor.object_id, { headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + process.env.HA_TOKEN } })
+          ha().get("/states/" + sensor.object_id, { headers: { "Content-Type": "application/json", "Authorization": "Bearer " + process.env.HA_TOKEN } })
             .then((res) => {
               console.log("res.data:", res.data);
               ctx.reply(`${sensor.name}: ${res.data.state} ${sensor.unit_of_measurement}`);
@@ -148,36 +156,81 @@ export class DachaUpdate {
     }
   }
 
-  @Action(/control(\d+)((-(\w+))?(-(\w+))?)?/gm) //(/control(\d+)-(\w+)/gm)
+  @Action(/control-(\d+)/gm) //(/control(\d+)-(\w+)/gm)
   async controlAction(@Ctx() ctx: Context) {
     if ("match" in ctx) {
       console.log(">>> match:", ctx.match);
-      
+
       const devId: number = ctx.match[1];
       const dev = await this.dachaService.getDevice(devId);
       if (dev) {
-        const action: string = ctx.match[2];
-        console.log(">>> action:", action);
-        //switch(dev.)
+        console.log(">>> dev:", dev);
 
         ctx.replyWithMarkdownV2(`Состояние устройства *${dev.name}:*`);
         dev.controls.forEach(async (control) => {
           const ha = () => { return axios.create({ baseURL: process.env.HA_API_URL }); }
-          ha().get("/states/" + control.entity_id, { headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + process.env.HA_TOKEN } })
+          ha().get("/states/" + control.entity_id, { headers: { "Content-Type": "application/json", "Authorization": "Bearer " + process.env.HA_TOKEN } })
             .then((res) => {
               console.log("res.data:", res.data);
-              ctx.reply(`${control.name}: ${res.data.state}`);
-
-/*               devices.forEach((dev, idx) => {
-                buttons.push([Markup.button.callback(dev.name, "control" + dev.id)]);
-              });
-              ctx.reply("Контролируемые устройства:", Markup.inlineKeyboard(buttons)); */
-
-
-
+              switch (control.type) {
+                case "switch":
+                  const action = res.data.state == "on" ? { state: "Включено", command: "turn_off", text: "Выключить" } : { state: "Выключено", command: "turn_on", text: "Включить" };
+                  ctx.reply(`${control.name}: ${action.state}`, Markup.inlineKeyboard([Markup.button.callback(action.text, `command-${control.id}-${action.command}`)]));
+                  break;
+                default:
+                  ctx.reply(`${control.name}: ${res.data.state}`);
+                  break;
+              }
             })
             .catch((err: Error) => ctx.reply("Ошибка " + control.name + ":" + err.message));
         });
+
+
+      }
+    }
+  }
+
+  @Action(/command-(\d+)-(\w+)/gm) //(/control(\d+)-(\w+)/gm)
+  async commandAction(@Ctx() ctx: Context) {
+    if ("match" in ctx) {
+      console.log(">>> match:", ctx.match);
+
+      const controlId: number = ctx.match[1];
+      const command = ctx.match[2];
+      const control = await this.dachaService.getControl(controlId);
+      if (control) {
+        console.log(">>> control:", control);
+
+        const ha = () => { return axios.create({ baseURL: process.env.HA_API_URL }); }
+
+        switch (control.type) {
+          case "switch":
+            ha().post("services/switch/" + command,
+              { "entity_id": control.entity_id, },
+              { headers: { "Content-Type": "application/json", "Authorization": "Bearer " + process.env.HA_TOKEN } })
+              .then((res) => {
+                console.log(">>> res:", res);
+
+                const action = command == "turn_on" ? { state: "Включено", command: "turn_off", text: "Выключить" } : { state: "Выключено", command: "turn_on", text: "Включить" };
+                ctx.editMessageText(`${control.name}: ${action.state}`, Markup.inlineKeyboard([Markup.button.callback(action.text, `command-${control.id}-${action.command}`)]));
+              })
+              .catch((err: Error) => ctx.reply("Ошибка устройства " + control.name + ":" + err.message));
+
+            //console.log(">>> result:", result)
+
+
+
+            //const action = res.data.state == "on" ? { state: "Включено", command: "turn_off", text: "Выключить" } : { state: "Выключено", command: "turn_on", text: "Включить" };
+            //ctx.reply(`${control.name}: ${action.state}`, Markup.inlineKeyboard([Markup.button.callback(action.text, `command-${control.id}-${action.command}`)]));
+            break;
+          default:
+            ctx.reply(`${control.name}: Неопознанная команда`);
+            break;
+        }
+
+
+        //tx.editMessageText(`control: ${control.name} \ncommand: ${command}`,
+        //  Markup.inlineKeyboard([Markup.button.callback("qq epta", `Change button`)]));
       }
     }
   }

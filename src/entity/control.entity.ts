@@ -1,7 +1,7 @@
-import { Column, Entity, PrimaryGeneratedColumn, ManyToOne, Relation } from 'typeorm';
-import { Device } from './device.entity';
+import { Column, Entity, PrimaryGeneratedColumn, ManyToOne, Relation } from "typeorm";
+import { Device } from "./device.entity";
 
-@Entity('controls')
+@Entity("controls")
 export class Control {
   @PrimaryGeneratedColumn()
   id: number;

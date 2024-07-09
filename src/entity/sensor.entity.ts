@@ -1,7 +1,7 @@
-import { Column, Entity, PrimaryGeneratedColumn, ManyToOne, Relation } from 'typeorm';
-import { Device } from './device.entity';
+import { Column, Entity, PrimaryGeneratedColumn, ManyToOne, Relation } from "typeorm";
+import { Device } from "./device.entity";
 
-@Entity('sensors')
+@Entity("sensors")
 export class Sensor {
   @PrimaryGeneratedColumn()
   id: number;
