@@ -7,10 +7,11 @@ import { DachaService } from './dacha.service';
 import { Camera } from '@/entity/camera.entity';
 import { Device } from '@/entity/device.entity';
 import { Sensor } from '@/entity/sensor.entity';
+import { Control } from '@/entity/control.entity';
 
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Camera, Device, Sensor])],
+  imports: [TypeOrmModule.forFeature([Camera, Device, Sensor, Control])],
   providers: [DachaUpdate, DachaService, Telegraf], //, RandomNumberScene],
 })
 export class DachaModule { }

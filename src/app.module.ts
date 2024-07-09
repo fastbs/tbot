@@ -14,6 +14,7 @@ import { LoggerMiddleware } from './logger.middleware';
 import { Camera } from './entity/camera.entity';
 import { Device } from './entity/device.entity';
 import { Sensor } from './entity/sensor.entity';
+import { Control } from './entity/control.entity';
 
 @Module({
   imports: [
@@ -21,7 +22,7 @@ import { Sensor } from './entity/sensor.entity';
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: process.env.DATABASE,
-      entities: [Camera, Device, Sensor],
+      entities: [Camera, Device, Sensor, Control],
       synchronize: true,
     }),
     TelegrafModule.forRoot({

@@ -1,8 +1,8 @@
 import { Column, Entity, PrimaryGeneratedColumn, ManyToOne, Relation } from 'typeorm';
 import { Device } from './device.entity';
 
-@Entity('sensors')
-export class Sensor {
+@Entity('controls')
+export class Control {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -10,14 +10,11 @@ export class Sensor {
   name: string;
 
   @Column()
-  ha_name: string;
+  entity_id: string;
 
   @Column()
-  object_id: string;
+  type: string;
 
-  @Column()
-  unit_of_measurement: string;
-
-  @ManyToOne(() => Device, (device) => device.sensors)
+  @ManyToOne(() => Device, (device) => device.controls)
   device: Relation<Device>
 }

@@ -85,6 +85,7 @@ export class DachaUpdate {
   @Command("devices")
   async devicesCommand(@Ctx() ctx: Context) {
     const devices = await this.dachaService.findAllDevices();
+    console.log(">>> devices:", devices);
     const buttons = [];
     devices.forEach((dev, idx) => {
       buttons.push([Markup.button.callback(dev.name, "device" + dev.id)]);
@@ -92,11 +93,14 @@ export class DachaUpdate {
     ctx.reply("Наши устройства:", Markup.inlineKeyboard(buttons));
   }
 
-  @Command("sensors")
-  async sensorsCommand(@Ctx() ctx: Context) {
-    const sensors = await this.dachaService.findAllSensors();
-    console.log(">>> sensors:", sensors);
-    ctx.reply(JSON.stringify(sensors, null, 2));
+  @Command("controls")
+  async controlsCommand(@Ctx() ctx: Context) {
+    const devices = await this.dachaService.findAllControlledDevices();
+    const buttons = [];
+    devices.forEach((dev, idx) => {
+      buttons.push([Markup.button.callback(dev.name, "control" + dev.id + "-state")]);
+    });
+    ctx.reply("Контролируемые устройства:", Markup.inlineKeyboard(buttons));
   }
 
   @Action(/camera(\d+)/gm)
@@ -130,6 +134,7 @@ export class DachaUpdate {
       const devId: number = ctx.match[1];
       const dev = await this.dachaService.getDevice(devId);
       if (dev) {
+        ctx.replyWithMarkdownV2(`Состояние устройства *${dev.name}:*`);
         dev.sensors.forEach(async (sensor) => {
           const ha = () => { return axios.create({ baseURL: process.env.HA_API_URL }); }
           ha().get("/states/" + sensor.object_id, { headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + process.env.HA_TOKEN } })
@@ -138,8 +143,40 @@ export class DachaUpdate {
               ctx.reply(`${sensor.name}: ${res.data.state} ${sensor.unit_of_measurement}`);
             })
             .catch((err: Error) => ctx.reply("Ошибка сенсора " + sensor.name + ":" + err.message));
+        });
+      }
+    }
+  }
+
+  @Action(/control(\d+)((-(\w+))?(-(\w+))?)?/gm) //(/control(\d+)-(\w+)/gm)
+  async controlAction(@Ctx() ctx: Context) {
+    if ("match" in ctx) {
+      console.log(">>> match:", ctx.match);
+      
+      const devId: number = ctx.match[1];
+      const dev = await this.dachaService.getDevice(devId);
+      if (dev) {
+        const action: string = ctx.match[2];
+        console.log(">>> action:", action);
+        //switch(dev.)
+
+        ctx.replyWithMarkdownV2(`Состояние устройства *${dev.name}:*`);
+        dev.controls.forEach(async (control) => {
+          const ha = () => { return axios.create({ baseURL: process.env.HA_API_URL }); }
+          ha().get("/states/" + control.entity_id, { headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + process.env.HA_TOKEN } })
+            .then((res) => {
+              console.log("res.data:", res.data);
+              ctx.reply(`${control.name}: ${res.data.state}`);
+
+/*               devices.forEach((dev, idx) => {
+                buttons.push([Markup.button.callback(dev.name, "control" + dev.id)]);
+              });
+              ctx.reply("Контролируемые устройства:", Markup.inlineKeyboard(buttons)); */
 
 
+
+            })
+            .catch((err: Error) => ctx.reply("Ошибка " + control.name + ":" + err.message));
         });
       }
     }

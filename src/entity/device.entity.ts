@@ -1,5 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToMany, Relation, JoinColumn } from 'typeorm';
 import { Sensor } from './sensor.entity';
+import { Control } from './control.entity';
 
 @Entity('devices')
 export class Device {
@@ -16,6 +17,10 @@ export class Device {
   entry_id: string;
 
   @OneToMany(() => Sensor, (sensor) => sensor.device)
-  //@JoinColumn()
+  @JoinColumn()
   sensors: Relation<Sensor>[];
+
+  @OneToMany(() => Control, (control) => control.device)
+  @JoinColumn()
+  controls: Relation<Control>[];
 }
