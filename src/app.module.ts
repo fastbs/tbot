@@ -9,7 +9,7 @@ import { AppService } from "./app.service";
 import { TelegrafModule } from "nestjs-telegraf";
 import { DachaModule } from "./dacha/dacha.module";
 
-import { LoggerMiddleware } from "./logger.middleware";
+import { LoggerMiddleware } from "./middleware/logger.middleware";
 
 import { Camera } from "./entity/camera.entity";
 import { Device } from "./entity/device.entity";
