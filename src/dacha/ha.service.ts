@@ -8,11 +8,26 @@ export class HAService {
         private readonly httpService: HttpService
     ) { }
 
-    getCamPicture(camEntity: string) {
-        return this.httpService.get("/states/" + camEntity, {
-            baseURL: process.env.HA_API_URL,
-            headers: { "Content-Type": "application/json", "Authorization": "Bearer " + process.env.HA_TOKEN }
-        })
+    getEntityState(entityId: string) {
+        return this.httpService.get("/states/" + entityId,
+            {
+                baseURL: process.env.HA_API_URL,
+                headers: { "Content-Type": "application/json", "Authorization": "Bearer " + process.env.HA_TOKEN }
+            })
+    }
+
+    callService(domain: string, service: string, entityId: string) {
+        return this.httpService.post(`/services/${domain}/${service}`,
+            { "entity_id": entityId, },
+            {
+                baseURL: process.env.HA_API_URL,
+                headers: { "Content-Type": "application/json", "Authorization": "Bearer " + process.env.HA_TOKEN }
+            });
+
+        /*         ha().post("services/switch/" + command,
+                    { "entity_id": control.entity_id, },
+                    { headers: { "Content-Type": "application/json", "Authorization": "Bearer " + process.env.HA_TOKEN } })
+         */
     }
 
 }
