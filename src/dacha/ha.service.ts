@@ -23,11 +23,6 @@ export class HAService {
                 baseURL: process.env.HA_API_URL,
                 headers: { "Content-Type": "application/json", "Authorization": "Bearer " + process.env.HA_TOKEN }
             });
-
-        /*         ha().post("services/switch/" + command,
-                    { "entity_id": control.entity_id, },
-                    { headers: { "Content-Type": "application/json", "Authorization": "Bearer " + process.env.HA_TOKEN } })
-         */
     }
 
 }
